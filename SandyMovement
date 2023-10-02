@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SandyMovement : MonoBehaviour
+{
+    float horiMovement;
+    float vertiMovement;
+    float movementSpeed;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        movementSpeed = 5f;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        horiMovement = Input.GetAxis("Horizontal");
+        transform.Translate(horiMovement * movementSpeed * Time.deltaTime, 0, 0);
+
+        vertiMovement = Input.GetAxis("Vertical");
+        transform.Translate(0, 0, vertiMovement * movementSpeed * Time.deltaTime);
+
+    }
+}
