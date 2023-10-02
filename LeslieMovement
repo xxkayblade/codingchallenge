@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LeslieMovement : MonoBehaviour
+{
+    string firstWord;
+    string secondWord;
+    float numPancakes;
+    string lastWord;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        firstWord = "I";
+        secondWord = "want";
+        numPancakes = 100f;
+        lastWord = "pancakes.";
+
+        Debug.Log(firstWord + " " + secondWord + " " + numPancakes + " " + lastWord);
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown("e"))
+        {
+            transform.Translate(0, 3, 0);
+        }
+    }
+}
